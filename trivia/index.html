@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script language = "javascript">
+
+            function checkAnswer(){
+                let x = document.forms["myForm"]["a"].value;
+
+                if (x== "Kai Havertz"){
+                    document.getElementById("field").style.backgroundColor='green';
+                    document.getElementById('erg').innerHTML="right";
+
+                }
+                else {
+                    document.getElementById("field").style.backgroundColor='red';
+                    document.getElementById('erg').innerHTML="wrong";
+                    
+                }
+            }
+
+            function buttonColor1()
+            {
+
+                document.getElementById('1').style.backgroundColor="#911";
+                document.getElementById('1.1').innerHTML="wrong";
+
+            }
+            function buttonColor2(){
+                document.getElementById("2").style.backgroundColor='green';
+                document.getElementById('2.1').innerHTML="right";
+            }
+
+            function buttonColor3(){
+                document.getElementById("3").style.backgroundColor='#911';
+                document.getElementById('3.1').innerHTML="wrong";
+
+            }
+
+
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3> How many Champions League Trophies has Chelsea FC won? </h3>
+                <button type="button" onclick= "buttonColor1()" id="1" >1</button>
+                <p id="1.1"> </p>
+                <button type="button" onclick= "buttonColor2()" id="2">2</button>
+                <p id="2.1"> </p>
+                <button type="button" onclick= "buttonColor3()" id="3">3</button>
+                <p id="3.1"> </p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response </h2>
+                <hr>
+                <h3> Who scored the winning goal of the 2021 Final? </h3>
+                <form name = "myForm" onsubmit= "return checkAnswer()" method = "post">
+                    Answer: <input name="a" type="text" id= "field" >
+                    <input type="submit" value="Submit">
+                </form>
+                <p id= "erg"> </p>
+
+            </div>
+        </div>
+    </body>
+</html>

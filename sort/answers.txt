@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: it was the quickest, when the input was already sorted
+
+sort2 uses: Merge sort
+
+How do you know?: it was the second quickest, when the input was alredy sorted
+
+sort3 uses: Selection sort
+
+How do you know?: it was by far the slowest, when the input was already sorted

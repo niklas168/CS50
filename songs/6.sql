@@ -1,0 +1,1 @@
+SELECT s.name FROM songs s, artists a WHERE a.id=s.artist_id AND a.name= 'Post Malone';
